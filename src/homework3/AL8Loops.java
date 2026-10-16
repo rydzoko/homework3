@@ -1,5 +1,6 @@
+package homework3;
 import java.util.Scanner;
-
+// there are first 3 tasks from those 7 tasks
 public class AL8Loops {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -22,6 +23,8 @@ public class AL8Loops {
     System.out.println("Stopping, the target has reached: "+j+" < "+i*10+".");
 
     
+    //for (;;)
+
 
     scanner.close();
 
