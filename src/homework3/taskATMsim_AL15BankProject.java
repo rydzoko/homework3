@@ -1,6 +1,9 @@
+//homework was made according to requirements in the pdf, huh
+
+package homework3;
 import java.util.Scanner;
 
-public class AL15BankProject {
+public class taskATMsim_AL15BankProject {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -10,7 +13,7 @@ public class AL15BankProject {
 
 
         System.out.println("======Simple ATM======\nWelcome to our bank!~\nBefore continuing, please log in.\nLogin username: ");
-        
+        //optionally added a username logging feature
         for (;;) {
             name = sc.next();
             if (!(name.equalsIgnoreCase("Aziret"))) {
@@ -26,13 +29,13 @@ public class AL15BankProject {
 
         System.out.print("Enter the PIN: ");
 
-
+        //entering the pin and checking the attempts
         for (;;) {
             pinLog= sc.nextInt();
              if (!(att>1)) {
-                System.out.println("Card blocked.");
-                sc.close();
-                System.exit(0);
+                System.out.println("Your account has been blocked.");
+                sc.close();//before it gets terminated, the scanner should be closed
+                System.exit(0); //the program then ends afterwards
             } else if (!(pin==pinLog)) {
                 System.out.println("Incorrect password!");
                 --att;
@@ -43,7 +46,7 @@ public class AL15BankProject {
                 break;
             }
         }
-
+        //apparently i need to name a loop before using a "break;(+name of a loop)" command, that collapses the entire loop so you get out of it immediately
         someLoop:
         for (;;) {
             System.out.println("\n======ATM Menu======\n1)Check balance.\n2)Deposit money\n3)Withdraw money\n4)Exit");
@@ -69,7 +72,7 @@ public class AL15BankProject {
                 }
 
                 case 3: {
-                    if (bal<=0) {
+                    if (bal<=0) { //there the if statement checks if a user's balance is equal or less than zero, if true, it will kick them out right away
                         System.out.println("\nImpossible to withdraw! Balance is 0 or less.");
                         break;
                     } 
@@ -87,8 +90,8 @@ public class AL15BankProject {
                     
                 }
                 case 4: {
-                    System.out.println("\nThank you for using our ATM! ^-^");
-                    break someLoop;
+                    System.out.println("\nThank you for using the ATM! ^-^");
+                    break someLoop; //here it is, 
 
                 }
                 default: {

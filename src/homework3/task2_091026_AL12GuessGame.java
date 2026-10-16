@@ -1,7 +1,10 @@
+//practice sessionm, task 2nd, random was used, so it was imported, as well as scanner.
+
+package homework3;
 import java.util.Random;
 import java.util.Scanner;
 
-public class AL12GuessGame {
+public class task2_091026_AL12GuessGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
@@ -11,6 +14,8 @@ public class AL12GuessGame {
 
         System.out.println("======Welcome to our Java number guessing game!======");
         System.out.println("Before we start, let me quickly pick up a number...");
+        //i wanted some immersion like if a programm waas actually thinking on choosing
+        //  a random number before startin, so i ended up finding this method
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -21,11 +26,11 @@ public class AL12GuessGame {
 
         for (; inpNum != randomNum && att > 0;) {
             if (inpNum > randomNum) {
-                System.out.println("Too high!");
+                System.out.println("Yours's high!");
                 att -= 1;
                 count += 1;
             } else if (inpNum < randomNum) {
-                System.out.println("Too low!");
+                System.out.println("Yours's low!");
                 att -= 1;
                 count += 1;
             }

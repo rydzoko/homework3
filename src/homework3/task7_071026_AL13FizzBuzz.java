@@ -1,6 +1,12 @@
+//practice session, task 7th
+//code is written according to how task was described,
+//i used for loops, ints, and booleans, due to me, wanting to make a user 
+// to decide whether they finished playing with it or they want to continue
+
+package homework3;
 import java.util.Scanner;
 
-public class AL13FizzBuzz {
+public class task7_071026_AL13FizzBuzz {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

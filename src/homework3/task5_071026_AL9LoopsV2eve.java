@@ -1,6 +1,9 @@
-import java.util.Scanner;
+package homework3;
+//Practice session 07.10.2026, 5th task
+//printing all even number up until the input number placed by user
 
-public class AL9LoopsV2eve {
+import java.util.Scanner;
+public class task5_071026_AL9LoopsV2eve {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
