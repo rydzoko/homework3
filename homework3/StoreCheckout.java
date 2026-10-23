@@ -1,4 +1,3 @@
-package homework3;
 import java.util.Scanner;
 public class StoreCheckout {
     public static void main(String[] args) {

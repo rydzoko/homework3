@@ -1,6 +1,6 @@
 //homework was made according to requirements in the pdf, huh
 
-package homework3;
+
 import java.util.Scanner;
 
 public class taskATMsim_AL15BankProject {

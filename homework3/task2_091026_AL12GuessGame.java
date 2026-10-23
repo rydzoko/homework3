@@ -1,6 +1,6 @@
 //practice sessionm, task 2nd, random was used, so it was imported, as well as scanner.
 
-package homework3;
+
 import java.util.Random;
 import java.util.Scanner;
 

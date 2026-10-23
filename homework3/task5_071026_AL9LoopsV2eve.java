@@ -1,4 +1,4 @@
-package homework3;
+
 //Practice session 07.10.2026, 5th task
 //printing all even number up until the input number placed by user
 

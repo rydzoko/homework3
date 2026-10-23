@@ -3,7 +3,7 @@
 //i used for loops, ints, and booleans, due to me, wanting to make a user 
 // to decide whether they finished playing with it or they want to continue
 
-package homework3;
+
 import java.util.Scanner;
 
 public class task7_071026_AL13FizzBuzz {

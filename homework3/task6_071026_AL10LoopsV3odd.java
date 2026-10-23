@@ -1,7 +1,7 @@
 //practice session, 6th task
 //printing odd numbers till it gets to the input number of user's
 
-package homework3;
+
 import java.util.Scanner;
 public class task6_071026_AL10LoopsV3odd {
     public static void main(String[] args) {

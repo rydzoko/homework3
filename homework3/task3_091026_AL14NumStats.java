@@ -1,6 +1,6 @@
 //practice session, task 3rd, the statistics were made without using arrays, 
 //and it seems that the method with "if"s was even faster than what you usualy deal with arrays.
-package homework3;
+
 import java.util.Scanner;
 
 public class task3_091026_AL14NumStats {

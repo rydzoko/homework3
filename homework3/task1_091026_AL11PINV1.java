@@ -1,6 +1,5 @@
 //practice session, atm pin verification, task 1st, it covers both situations when
 // a user gets the pin correct or wrong, well, it was meant to act like so already in the first place though
-package homework3;
 import java.util.Scanner;
 
 public class task1_091026_AL11PINV1 {

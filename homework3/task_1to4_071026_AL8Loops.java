@@ -1,7 +1,6 @@
 //PRACTICE SESSION 07.10.2026
 //1 to 4 tasks
 
-package homework3;
 import java.util.Scanner;
 // there are first 3 tasks from those 7 tasks
 public class task_1to4_071026_AL8Loops {
