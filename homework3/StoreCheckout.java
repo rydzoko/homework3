@@ -210,9 +210,7 @@ public class StoreCheckout {
     }
     }
     //bonus 4
-    if ((mouseWhAmo==keyWhAmo)&&(keyWhAmo==headWhAmo)&&(headWhAmo==lapWhAmo)){
-        mostPurchIt = "Wait, all quantities seem to be equal";
-    }
+    
 
     if ((mouseWhAmo>=keyWhAmo)&&(mouseWhAmo>=headWhAmo)&&(mouseWhAmo>=lapWhAmo)) {
         mostPurchIt = "Mouse";
@@ -223,6 +221,11 @@ public class StoreCheckout {
     } else {
         mostPurchIt ="Laptop-Stand";
     }
+
+    if ((mouseWhAmo==keyWhAmo)&&(keyWhAmo==headWhAmo)&&(headWhAmo==lapWhAmo)){
+        mostPurchIt = "Wait, all quantities seem to be equal";
+    }
+    
     //bonus #5
     if (allWholeAmo>=10) {
         couponRew = true;
