@@ -236,7 +236,7 @@ public class StoreCheckout {
     System.out.println(congratSt);
 
     if (!(subTotalIt==subTotalItDisc)){
-        System.out.println("With item discount: $"+subTotalItDisc);
+        System.out.println("With item discount: $"+subTotalItDisc+" (new current total)");
     }
     System.out.println(discTotalSt);
     if (discTotal==0) {
