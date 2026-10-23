@@ -6,10 +6,10 @@ public class StoreCheckout {
     //validate input, calculates discounts, processes payment, and prints a receipt.
     Scanner sc = new Scanner(System.in);
     int opt, mouseAmo=0, keyAmo=0, headAmo=0, lapAmo=0, allWholeAmo=0, mouseWhAmo=0,keyWhAmo=0,headWhAmo=0,lapWhAmo=0, pseudoCalc=0, discTotal=0;
-    double mouseDiscPr=0, keyDiscPr=0, headDiscPr=0, lapDiscPr=0, subTotalIt=0,subTotalItDisc=0, totalDisc=0, payment, change=0;
+    double mouseDiscPr=0, keyDiscPr=0, headDiscPr=0, lapDiscPr=0, subTotalIt=0,subTotalItDisc=0, totalDisc=0, payment, change=0, discInMoney=0;
     boolean isContin, couponRew=false;
     String mouSt=" Mouse",keySt=" Keyboard",headSt=" Headphones",lapSt=" Laptop-Stand", congratSt="Congrats! You've got a 5% (separated) discount(s) for the following item(s):"; 
-    String mostPurchIt, discAvai="", discTotalSt="";
+    String mostPurchIt, discTotalSt="", couponRewSt="";
     
     System.out.println("\nHI and WELCOME to our online Simple Store!");
     problemsStartHere:
@@ -130,7 +130,7 @@ public class StoreCheckout {
                 System.out.println("\n--Quantities and Price--\nMouse:           "+mouseWhAmo+" ($"+(20*mouseWhAmo)+")"+"\nKeyboard:        "+keyWhAmo+" ($"+(40*keyWhAmo)+")"+"\nHeadphones:      "+headWhAmo+" ($"+(50*headWhAmo)+")"+"\nLaptop Stand:    "+lapWhAmo+" ($"+(30*lapWhAmo)+")"+"\n-----------------------\nCurrent total:   "+allWholeAmo+" ($"+((20*mouseWhAmo)+(40*keyWhAmo)+(50*headWhAmo)+(30*lapWhAmo))+")");
             }
         
-            default -> System.out.println("\nInvalid option.\nPlease choose from 1 to 5.\n");
+            default -> System.out.println("\nInvalid option.\nPlease choose from 1 to 6.\n");
         }        
 
     }
@@ -196,12 +196,13 @@ public class StoreCheckout {
             totalDisc = (subTotalItDisc*0.85);
             discTotalSt = "You receaved a 15% discount for the total!";
             discTotal= 15;
-
+            discInMoney = (subTotalItDisc*0.15);
             break hehe;
         }
         totalDisc = (subTotalItDisc*0.90);
         discTotalSt = "You receaved a 10% discount for the total!";
         discTotal=10;
+        discInMoney = (subTotalItDisc*0.10);
         break hehe;
     } else {
         totalDisc = subTotalItDisc;
@@ -232,15 +233,17 @@ public class StoreCheckout {
     System.out.println("\n--Statistics (Amount/Price)--\nMouse:           "+mouseWhAmo+" ($"+(20*mouseWhAmo)+")"+"\nKeyboard:        "+keyWhAmo+" ($"+(40*keyWhAmo)+")"+"\nHeadphones:      "+headWhAmo+" ($"+(50*headWhAmo)+")"+"\nLaptop Stand:    "+lapWhAmo+" ($"+(30*lapWhAmo)+")");
     System.out.println("Items purchased: "+allWholeAmo+"\nSubtotal: $"+subTotalIt+"\n");
 
-    System.out.println(congratSt+"\n"+discTotalSt);
+    System.out.println(congratSt);
+
     if (!(subTotalIt==subTotalItDisc)){
         System.out.println("With item discount: $"+subTotalItDisc);
     }
+    System.out.println(discTotalSt);
     if (discTotal==0) {
-        System.out.println("Discount: None\nTotal: $"+totalDisc);
+        System.out.println("Total discount: None\nTotal: $"+totalDisc);
         
     } else {
-        System.out.println("\nTotal discount: "+discTotal+"%\nTotal: $"+totalDisc);
+        System.out.println("\nTotal discount: "+discTotal+"% ($"+discInMoney+")"+"\nTotal: $"+totalDisc);
     }
 
 
@@ -265,9 +268,29 @@ public class StoreCheckout {
     
     System.out.println("=======================\n       Simple Store\n=======================");
     System.out.println("Item purchased: "+allWholeAmo);
-    System.out.println("Subtotal: "+subTotalItDisc);
-    
+    System.out.println("Subtotal: $"+subTotalItDisc);
+    System.out.println("Discount: "+discTotal+"% ($"+discInMoney+")");
+    System.out.println("Final Total: $"+totalDisc);
+    System.out.println("Payment: $"+payment);
+    System.out.println("Change: $"+change+"\n");
 
+    System.out.println("The most purchased item: "+mostPurchIt);
+    if (mostPurchIt.equalsIgnoreCase("Mouse")) {
+        System.out.println("Quantity: "+mouseWhAmo);
+    } else if (mostPurchIt.equalsIgnoreCase("Keyboard")){
+        System.out.println("Quantity: "+keyWhAmo);
+    } else if (mostPurchIt.equalsIgnoreCase("Headphones")){
+        System.out.println("Quantity: "+keyWhAmo);
+    } else {
+        System.out.println("Quantity: "+lapWhAmo);
+    }
+    if (couponRew){
+        couponRewSt = "Whoa! You earned a $10 coupon for your next visit!";
+    } else {
+
+    }
+    System.out.println(couponRewSt);
+    System.out.println("=======================\nThank you for shopping!\n=======================");
     sc.close();
     
 
