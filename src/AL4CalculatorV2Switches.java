@@ -17,7 +17,8 @@ public class AL4CalculatorV2Switches {
         operator = scanner.next().charAt(0); 
 
         switch (operator) {
-            case '+' -> System.out.println("Result: "+(num1 + num2)); 
+            case '+' -> {
+                System.out.println("Result: "+(num1 + num2));} 
             case '-' -> System.out.println("Result: "+(num1 - num2));
             case '*' -> System.out.println("Result: "+(num1 * num2));
             case '/' -> {

@@ -6,6 +6,7 @@ bin/
 out/
 target/
 build/
+src/
 
 # Ignore IDE settings folders
 .vscode/
