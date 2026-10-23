@@ -266,7 +266,7 @@ public class StoreCheckout {
         }  
     }
     
-    System.out.println("=======================\n       Simple Store\n=======================");
+    System.out.println("=======================\n      Simple Store\n=======================");
     System.out.println("Item purchased: "+allWholeAmo);
     System.out.println("Subtotal: $"+subTotalItDisc);
     System.out.println("Discount: "+discTotal+"% ($"+discInMoney+")");
@@ -285,17 +285,12 @@ public class StoreCheckout {
         System.out.println("Quantity: "+lapWhAmo);
     }
     if (couponRew){
-        couponRewSt = "Whoa! You earned a $10 coupon for your next visit!";
+        couponRewSt = "\nWhoa! You also earned a $10 coupon for your next visit!";
     } else {
 
     }
     System.out.println(couponRewSt);
     System.out.println("=======================\nThank you for shopping!\n=======================");
     sc.close();
-    
-
-    
-    
-
     }
 }
