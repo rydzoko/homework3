@@ -134,7 +134,7 @@ public class StoreCheckout {
         }        
 
     }
-    //let's continue with the rest of a programsubTotal
+    //let's continue with the rest of a program
     //bonuses!
     //#1 If the customer buys 5 or more units of the same product, give a 5% discount on that product purchase
     if ((mouseWhAmo >= 5)||(keyWhAmo >= 5)||(headWhAmo >= 5)||(lapWhAmo >= 5)){
@@ -196,6 +196,7 @@ public class StoreCheckout {
             totalDisc = (subTotalItDisc*0.85);
             discTotalSt = "You receaved a 15% discount for the total!";
             discTotal= 15;
+
             break hehe;
         }
         totalDisc = (subTotalItDisc*0.90);
@@ -262,6 +263,9 @@ public class StoreCheckout {
         }  
     }
     
+    System.out.println("=======================\n       Simple Store\n=======================");
+    System.out.println("Item purchased: "+allWholeAmo);
+    System.out.println("Subtotal: "+subTotalItDisc);
     
 
     sc.close();
