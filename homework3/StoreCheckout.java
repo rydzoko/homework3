@@ -282,7 +282,7 @@ public class StoreCheckout {
     } else if (mostPurchIt.equalsIgnoreCase("Keyboard")){
         System.out.println("Quantity: "+keyWhAmo);
     } else if (mostPurchIt.equalsIgnoreCase("Headphones")){
-        System.out.println("Quantity: "+keyWhAmo);
+        System.out.println("Quantity: "+headWhAmo);
     } else {
         System.out.println("Quantity: "+lapWhAmo);
     }
