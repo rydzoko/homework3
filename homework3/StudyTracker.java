@@ -74,7 +74,7 @@ public class StudyTracker {
                         }
 
                         default -> {
-                            System.out.println("\nInvalid option was entered. A range from 1 to 4 are only acceptable");
+                            System.out.println("\nInvalid option was entered. A range from 1 to 4 is only acceptable");
                             break;
 
                         }
@@ -104,7 +104,7 @@ public class StudyTracker {
                 }
             
                 default -> {
-                    System.out.println("\nInvalid option was entered. a range from 1 to 4 are only acceptable");
+                    System.out.println("\nInvalid option was entered. A range from 1 to 4 is only acceptable");
                     break;
                 }
                     
