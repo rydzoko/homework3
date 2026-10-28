@@ -1,18 +1,10 @@
-# 1. Get the number from the user
-number = int(input("Enter a decimal number: "))
+#theheader
+print(f"{'n':<4} | {'2**n':<6} | {'Binary Form':<12}")
+print("-" * 28)
 
-# 2. Create an empty string to hold our binary digits
-binary_result = ""
-
-# 3. Your while loop
-while number > 0:
-    remainder = number % 2
-    
-    # We glue the new digit to the FRONT of our string
-    binary_result = str(remainder) + binary_result 
-    
-    # Shrink the number for the next round
-    number = number // 2
-
-# 4. Print the final result
-print("Binary equivalent:", binary_result)
+#loop from n = 0 to 10
+for n in range(11):
+    value = 2 ** n
+    #bin(value)[2:] removes the '0b' prefix
+    binary_str = bin(value)[2:]
+    print(f"{n:<4} | {value:<6} | {binary_str:<12}")
