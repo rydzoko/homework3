@@ -3,12 +3,8 @@
 import java.util.Scanner;
 
 public class NumberPatternGenerator {
-
-    // changed to void since we print directly inside
-    public static void generator(int size, int option) {
-        
-        // regular switch statement looks more student-like than arrow switch
-        switch (option) {
+    public static void generator(int size, int opt) {
+        switch (opt) {
             case 1: // Right Triangle
                 for (int i = 1; i <= size; i++) {
                     for (int j = 1; j <= i; j++) {
@@ -18,7 +14,7 @@ public class NumberPatternGenerator {
                 }
                 break;
                 
-            case 2: // Inverted Right Triangle
+            case 2: //Inverted Right Triangle
                 for (int i = size; i >= 1; i--) {
                     for (int j = 1; j <= i; j++) {
                         System.out.print("*");
@@ -27,7 +23,7 @@ public class NumberPatternGenerator {
                 }
                 break;
                 
-            case 3: // Pyramid
+            case 3: //pyramido
                 for (int i = 1; i <= size; i++) {
                     // print empty spaces first to push stars to center
                     for (int j = 1; j <= size - i; j++) {
@@ -41,7 +37,7 @@ public class NumberPatternGenerator {
                 }
                 break;
                 
-            case 4: // Inverted Pyramid
+            case 4: //inverted Pyramid
                 for (int i = size; i >= 1; i--) {
                     // spaces increase as we go down
                     for (int j = 1; j <= size - i; j++) {
@@ -54,7 +50,7 @@ public class NumberPatternGenerator {
                 }
                 break;
                 
-            case 5: // Simple Square pattern as example 5
+            case 5: //simple Square pattern as example 5
                 for (int i = 1; i <= size; i++) {
                     for (int j = 1; j <= size; j++) {
                         System.out.print("*");
@@ -64,24 +60,24 @@ public class NumberPatternGenerator {
                 break;
                 
             default:
-                System.out.println("Invalid option");
+                System.out.println("Invalid operator, choose from 1-5");
                 break;
         }
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter size: ");
-        int rows = scanner.nextInt();
+        int rows = sc.nextInt();
 
         System.out.println("1 - Right Triangle\n2 - Inverted Triangle\n3 - Pyramid\n4 - Inverted Pyramid\n5 - Square");
         System.out.print("Choose pattern: ");
-        int choice = scanner.nextInt();
+        int choice = sc.nextInt();
+
 
         System.out.println();
         generator(rows, choice);
-        
-        scanner.close();
+        sc.close();
     }
 }
