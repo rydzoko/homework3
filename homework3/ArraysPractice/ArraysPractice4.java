@@ -2,7 +2,7 @@ package ArraysPractice;
 public class ArraysPractice4{
     public static void main(String[] args) {
         int[] origin = {5,23,11,15,234,8,12,13};
-        int[] revers = new int[8];
+        int[] revers = new int[origin.length];
         int j =0;
         for (int i =(origin.length-1); i>=0;i--, j++) {
                 revers[j] = origin[i];
